@@ -1,0 +1,71 @@
+body {
+  font-size: 0.875rem;
+  font-family: Source Sans Pro;
+  color: #222;
+  font-size: 14px;
+  background-color: #b4bf9f;
+}
+
+.container {
+  overflow: hidden;
+  width: 1100px; min-height: 100vh;
+  margin: 0 auto;
+  padding: 0 24px 48px 24px;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+
+.CodeMirror {
+  border: solid 1px #999;
+  background-color: #fff;
+  transition: 0.2s;
+}
+
+.CodeMirror-focused {
+  background-color: #eee;
+}
+
+textarea#lodash {
+  width: 100%;
+}
+
+
+.wrapperLodash {
+  width: 100%;
+  margin-bottom: 18px;
+  box-sizing: border-box;
+}
+
+.wrapperInput, .wrapperOutput {
+  width: 50%; float: left;
+  margin-bottom: 36px;
+  box-sizing: border-box;
+}
+
+span.label {
+  display: inline-block;
+  font-weight: 600;
+  padding: 0 0 4px 0;
+}
+
+span.info {
+  color: #666;
+  font-weight: 400;
+}
+
+button.run {
+  display: block;
+  border: 0;
+  width: 120px;
+  margin: 0 auto;
+  color: #333;
+  font-weight: 600;
+  line-height: 48px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button.run:hover {
+  background-color: #b4bf9f;
+}

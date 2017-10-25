@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="src/css/codemirror.css">
+    <link rel="stylesheet" href="src/css/main.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.6.12/beautify.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.25.0/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.25.0/mode/javascript/javascript.min.js"><</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.27/webfontloader.js"></script>
+    <script>WebFont.load({google:{families:["Source+Sans+Pro:400,400italic,600,600italic"]}});</script>
+    <script src="src/js/main.js"></script>
+    <title>Lodasher</title>
+  </head>
+  <body>
+    <div class="container">
+
+      <h1>Lodasher</h1>
+
+      <p>Write, execute, test, play with Lodash (<a href="https://lodash.com/docs/4.17.4">see the docs</a>) in the browser.</p>
+      <p>Note : <code>moment()</code> can be used.</p>
+
+      <div class="wrapperLodash">
+        <span class="label">Lodash</span>
+<textarea id="lodash">_(data)
+  .map(i =>
+    _(i).assign({ now: moment() })
+  )
+.value();</textarea>
+      </div>
+
+      <div class="wrapperInput">
+        <span class="label">Input (JavaScript/JSON data)</span>
+        <span class="info"> &ndash; assigned to <code>data</code> in the lodash expression</span>
+<textarea id="input">[
+  {
+    "idCycleSite": 380,
+    "idCycle": 342,
+    "title": "Mômes &amp; Cie",
+    "dateFrom": "2017-03-29",
+    "dateTo": "2017-07-30"
+  },
+  {
+    "idCycleSite": 381,
+    "idCycle": 346,
+    "title": "Jacques Becker",
+    "dateFrom": "2017-04-05",
+    "dateTo": "2017-04-29"
+  },
+  {
+    "idCycleSite": 375,
+    "idCycle": 347,
+    "title": "Alain Jessua",
+    "dateFrom": "2017-04-19",
+    "dateTo": "2017-04-29"
+  },
+  {
+    "idCycleSite": 382,
+    "idCycle": 348,
+    "title": "Festival de Cannes : scandales et controverses",
+    "dateFrom": "2017-04-26",
+    "dateTo": "2017-05-28"
+  },
+  {
+    "idCycleSite": 379,
+    "idCycle": 349,
+    "title": "Jean Eustache",
+    "dateFrom": "2017-05-03",
+    "dateTo": "2017-05-27"
+  },
+  {
+    "idCycleSite": 383,
+    "idCycle": 350,
+    "title": "Marlen Khoutsiev",
+    "dateFrom": "2017-05-10",
+    "dateTo": "2017-05-28"
+  }
+]</textarea>
+      </div>
+
+      <div class="wrapperOutput">
+        <span class="label">Output</span>
+        <textarea id="output"></textarea>
+      </div>
+
+      <button class="run">Run</button>
+
+    </div>
+
+
+  </body>
+</html>
