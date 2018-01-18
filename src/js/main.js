@@ -14,12 +14,11 @@ function main () {
     var input =  editor.input.getValue();
     var output;
 
-
-
     // If the input can't be JSON-parsed, interpret it as an array where each line is an item
     try {
-      JSON.parse(input);
+      JSON.parse(JSON.stringify(input));
     } catch (e) {
+      alert("Not parsed");
       input = JSON.stringify(
         _(input.split("\n"))
         .filter(d => d !== "") // Remove white lines (TODO: improve)
