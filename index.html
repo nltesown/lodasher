@@ -30,10 +30,11 @@
       <div class="wrapperLodash">
         <span class="label">Lodash</span>
 <textarea id="lodash">_(data)
-  .map(i =>
-    _(i).assign({ now: moment() })
-  )
-.value();</textarea>
+  .thru(d => {
+    return d;
+  })
+//  .map(d => d)
+  .value();</textarea>
       </div>
 
       <div class="wrapperInput">
